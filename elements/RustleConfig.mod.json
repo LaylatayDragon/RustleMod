@@ -1,0 +1,33 @@
+{
+  "_fv": 34,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Behavior",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "",
+            "varname": "ReplaceMobs",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Cow"
+          }
+        ]
+      }
+    ],
+    "file": "RustleConfig",
+    "configType": 0
+  }
+}

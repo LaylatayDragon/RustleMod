@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true
+		},
+		"walk": {
+			"loop": true
+		},
+		"attack": {
+			"loop": true
+		},
+		"death": {
+			"loop": true
+		},
+		"swim": {
+			"loop": true
+		},
+		"sprint": {
+			"loop": true
+		},
+		"sneak": {
+			"loop": true
+		}
+	},
+	"geckolib_format_version": 2
+}
