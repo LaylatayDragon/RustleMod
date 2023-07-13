@@ -26,7 +26,7 @@ public class CalfRenderer extends GeoEntityRenderer<CalfEntity> {
 			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
 
 		float age = animatable.getPercentAdult()*2;
-		stack.scale(1.0F, 1.0F, 1.0F);
+		stack.scale(1.0F+age, 1.0F+age, 1.0F+age);
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

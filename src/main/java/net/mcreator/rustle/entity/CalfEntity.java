@@ -95,7 +95,6 @@ public class CalfEntity extends Animal implements IAnimatable {
 
 	@Override
 	protected void registerGoals() {
-		adultAge = RustleConfigConfiguration.CALFADULTTIME.get();
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, CowEntity.class, false, false));
 		this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, Wolf.class, (float) 6, 1, 1.2));
@@ -216,6 +215,7 @@ public class CalfEntity extends Animal implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		adultAge = RustleConfigConfiguration.CALFADULTTIME.get();
 		if(age >= adultAge){
 			Level world = this.level;
 
@@ -233,7 +233,8 @@ public class CalfEntity extends Animal implements IAnimatable {
 
 					this.setHealth(0);
 			}
-	
+		
+		
 		age = age + 1;
 	}
 
