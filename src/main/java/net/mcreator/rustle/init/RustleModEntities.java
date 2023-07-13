@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.rustle.entity.SheepEntity;
 import net.mcreator.rustle.entity.CowEntity;
+import net.mcreator.rustle.entity.CalfEntity;
 import net.mcreator.rustle.RustleMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -33,6 +34,11 @@ public class RustleModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(SheepEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CalfEntity>> CALF = register("calf",
+			EntityType.Builder.<CalfEntity>of(CalfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(CalfEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -43,6 +49,7 @@ public class RustleModEntities {
 		event.enqueueWork(() -> {
 			CowEntity.init();
 			SheepEntity.init();
+			CalfEntity.init();
 		});
 	}
 
@@ -50,5 +57,6 @@ public class RustleModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(COW.get(), CowEntity.createAttributes().build());
 		event.put(SHEEP.get(), SheepEntity.createAttributes().build());
+		event.put(CALF.get(), CalfEntity.createAttributes().build());
 	}
 }

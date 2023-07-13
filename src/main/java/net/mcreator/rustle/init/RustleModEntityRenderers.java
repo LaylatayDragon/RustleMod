@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.rustle.client.renderer.SheepRenderer;
 import net.mcreator.rustle.client.renderer.CowRenderer;
+import net.mcreator.rustle.client.renderer.CalfRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class RustleModEntityRenderers {
@@ -18,5 +19,6 @@ public class RustleModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(RustleModEntities.COW.get(), CowRenderer::new);
 		event.registerEntityRenderer(RustleModEntities.SHEEP.get(), SheepRenderer::new);
+		event.registerEntityRenderer(RustleModEntities.CALF.get(), CalfRenderer::new);
 	}
 }

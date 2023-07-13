@@ -1,19 +1,19 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"Idle": {
-			"loop": true
-		},
-		"Swim": {
-			"loop": true
-		},
-		"attack": {
+		"idle": {
 			"loop": true
 		},
 		"walk": {
 			"loop": true
 		},
+		"attack": {
+			"loop": true
+		},
 		"death": {
+			"loop": true
+		},
+		"swim": {
 			"loop": true
 		},
 		"sprint": {

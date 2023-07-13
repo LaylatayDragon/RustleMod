@@ -2,8 +2,11 @@
   "config.rustle.rustle_config": "RustleConfig",
   "item.rustle.cow_spawn_egg": "Cow Spawn Egg",
   "item.rustle.cow_armor": "Cow Armor",
+  "entity.rustle.calf": "Calf",
   "item.rustle.white_average_fleece": "Average Fleece",
+  "item.rustle.calf_spawn_egg": "Calf Spawn Egg",
   "entity.rustle.sheep": "Sheep",
+  "subtitles.calf_hum": "Calf Moo",
   "item.rustle.sheep_spawn_egg": "Sheep Spawn Egg",
   "entity.rustle.cow": "Cow"
 }

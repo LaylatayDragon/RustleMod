@@ -56,6 +56,7 @@ import net.minecraft.world.InteractionHand;
 import net.mcreator.rustle.procedures.MilkCowProcedure;
 import net.mcreator.rustle.procedures.DisplayGenomeProcedure;
 
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.DifficultyInstance;
@@ -121,6 +122,11 @@ public class CowEntity extends Animal implements IAnimatable {
 	}
 
 	public static void rollGenome(){
+		String[][] other = new String[16][2];
+		if(genoToString().equals(genoToString(other)))
+		{
+			return;
+		}
 		Random x = new Random();
 
 		int i = 0;
@@ -149,7 +155,18 @@ public class CowEntity extends Animal implements IAnimatable {
 		return disposition;
 	}
 
-	public String genoToString()
+	public static String genoToString(String[][] genotype)
+	{
+		String holder = "";
+		for(int a = 0; a < genotype.length; a++)
+		{
+			holder += genotype[a][0];
+			holder += genotype[a][1];
+		}
+		return holder;
+	}
+
+	public static String genoToString()
 	{
 		String holder = "";
 		for(int a = 0; a < geno.length; a++)
@@ -218,11 +235,10 @@ public class CowEntity extends Animal implements IAnimatable {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		CowEntity retval = RustleModEntities.COW.get().create(serverWorld);
+		CalfEntity retval = RustleModEntities.CALF.get().create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}
-
 	
 	@Override
 	public SoundEvent getDeathSound() {

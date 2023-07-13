@@ -16,6 +16,7 @@ import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.rustle.init.RustleModEntities;
 import net.mcreator.rustle.entity.CowEntity;
+import net.mcreator.rustle.entity.CalfEntity;
 import net.mcreator.rustle.configuration.RustleConfigConfiguration;
 
 import javax.annotation.Nullable;
@@ -36,13 +37,24 @@ public class ReplaceCreatureProcedure {
 			return;
 		if (RustleConfigConfiguration.REPLACEMOBS.get()) {
 			if (entity instanceof Cow) {
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new CowEntity(RustleModEntities.COW.get(), _level);
-					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
-								null, null);
-					world.addFreshEntity(entityToSpawn);
+				if (entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false) {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = new CalfEntity(RustleModEntities.CALF.get(), _level);
+						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+						if (entityToSpawn instanceof Mob _mobToSpawn)
+							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
+									null, null);
+						world.addFreshEntity(entityToSpawn);
+					}
+				} else {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = new CowEntity(RustleModEntities.COW.get(), _level);
+						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+						if (entityToSpawn instanceof Mob _mobToSpawn)
+							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
+									null, null);
+						world.addFreshEntity(entityToSpawn);
+					}
 				}
 				{
 					Entity _ent = entity;

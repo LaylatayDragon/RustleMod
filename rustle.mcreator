@@ -207,17 +207,48 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "rustle_config"
+    },
+    {
+      "name": "Calf",
+      "type": "livingentity",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "calf"
+    },
+    {
+      "name": "CalfModel",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "calf_model",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "calf_hum",
+      "files": [
+        "calf_hum"
+      ],
+      "category": "neutral",
+      "subtitle": "Calf Moo"
+    }
+  ],
   "language_map": {
     "en_us": {
       "config.rustle.rustle_config": "RustleConfig",
       "item.rustle.cow_spawn_egg": "Cow Spawn Egg",
       "item.rustle.cow_armor": "Cow Armor",
+      "entity.rustle.calf": "Calf",
       "item.rustle.white_average_fleece": "Average Fleece",
+      "item.rustle.calf_spawn_egg": "Calf Spawn Egg",
       "entity.rustle.sheep": "Sheep",
+      "subtitles.calf_hum": "Calf Moo",
       "item.rustle.sheep_spawn_egg": "Sheep Spawn Egg",
       "entity.rustle.cow": "Cow"
     }
@@ -227,10 +258,6 @@
     "children": [
       {
         "name": "Fleece",
-        "children": []
-      },
-      {
-        "name": "Models",
         "children": []
       }
     ]

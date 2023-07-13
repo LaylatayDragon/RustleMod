@@ -1,0 +1,12 @@
+{
+  "calf_hum": {
+    "category": "neutral",
+    "subtitle": "subtitles.calf_hum",
+    "sounds": [
+      {
+        "name": "rustle:calf_hum",
+        "stream": false
+      }
+    ]
+  }
+}
