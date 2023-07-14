@@ -1,8 +1,13 @@
 package net.mcreator.rustle.procedures;
 
+import software.bernie.geckolib3.model.provider.data.EntityModelData;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib3.core.processor.IBone;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.rustle.entity.SheepEntity;
 
@@ -29,10 +34,10 @@ public class SheepModelProcedure extends AnimatedGeoModel<SheepEntity> {
 	@Override
 	public ResourceLocation getTextureLocation(SheepEntity entity) {
 		return new ResourceLocation("rustle", "textures/entities/sheep.png");
-		/**
-		}
-		@Override
-		public void setCustomAnimations(SheepEntity animatable, int instanceId, AnimationEvent animationEvent) {
+	}
+
+	@Override
+	public void setCustomAnimations(SheepEntity animatable, int instanceId, AnimationEvent animationEvent) {
 		super.setCustomAnimations(animatable, instanceId, animationEvent);
 		IBone head = this.getAnimationProcessor().getBone("head");
 		EntityModelData extraData = (EntityModelData) animationEvent.getExtraDataOfType(EntityModelData.class).get(0);

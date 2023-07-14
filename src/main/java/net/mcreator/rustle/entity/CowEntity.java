@@ -262,7 +262,7 @@ public class CowEntity extends Animal implements IAnimatable {
 	}
 
 	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
-		if (this.animationprocedure == "empty") {
+		//if (this.animationprocedure == "empty") {
 			if (event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
@@ -284,8 +284,8 @@ public class CowEntity extends Animal implements IAnimatable {
 			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP));
 			return PlayState.CONTINUE;
-		}
-		return PlayState.STOP;
+		//}
+//		return PlayState.STOP;
 	}
 
 	@Override
