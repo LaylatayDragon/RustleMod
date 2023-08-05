@@ -1,7 +1,0 @@
-{
-  "_fv": 34,
-  "_type": "procedure",
-  "definition": {
-    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"compare_mcitems\"><value name=\"a\"><block type=\"entity_iteminhand\"><value name=\"entity\"><block type=\"source_entity_from_deps\"></block></value></block></value><value name=\"b\"><block type=\"mcitem_all\"><field name=\"value\">Items.BOOK</field></block></value></block></value><statement name=\"DO0\"><block type=\"entity_send_chat\"><value name=\"text\"><block type=\"custom_dependency_string\"><field name=\"NAME\">genome</field></block></value><value name=\"entity\"><block type=\"source_entity_from_deps\"></block></value><value name=\"actbar\"><block type=\"logic_boolean\"><field name=\"BOOL\">FALSE</field></block></value></block></statement></block></next></block><block type=\"text\" x=\"136\" y=\"414\"><field name=\"TEXT\">Message</field></block></xml>"
-  }
-}
