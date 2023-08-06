@@ -6,8 +6,8 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.laylataydragon.rustlemod.client.renderer.RustleEntity;
 import com.laylataydragon.rustlemod.entity.CowEntity;
+import com.laylataydragon.rustlemod.entity.RustleEntity;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ai.goal.Goal;

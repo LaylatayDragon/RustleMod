@@ -3,7 +3,6 @@ package com.laylataydragon.rustlemod.entity;
 
 import net.minecraft.world.entity.ai.behavior.AnimalMakeLove;
 
-import com.laylataydragon.rustlemod.client.renderer.RustleEntity;
 import com.laylataydragon.rustlemod.entity.ai.AnimalBreedGoal;
 import com.laylataydragon.rustlemod.init.*;import com.laylataydragon.rustlemod.utility.*;
 import software.bernie.geckolib3.util.GeckoLibUtil;
@@ -109,6 +108,7 @@ public class CowEntity extends RustleEntity implements IAnimatable {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+		
 	}
 
 	@Override

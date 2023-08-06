@@ -1,9 +1,9 @@
 package com.laylataydragon.rustlemod.init;
 
-import com.laylataydragon.rustlemod.client.renderer.RustleEntity;
 import com.laylataydragon.rustlemod.entity.CalfEntity;
 import com.laylataydragon.rustlemod.entity.CowEntity;
 import com.laylataydragon.rustlemod.entity.LlamaEntity;
+import com.laylataydragon.rustlemod.entity.RustleEntity;
 import com.laylataydragon.rustlemod.entity.SheepEntity;
 
 import net.minecraftforge.event.entity.living.LivingEvent;
